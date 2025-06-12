@@ -1,6 +1,6 @@
 name: 02 Basics Events
 
-on: [push, pull_request]
+on: push
 
 jobs:
   print-hello-world:
