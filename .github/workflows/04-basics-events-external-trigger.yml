@@ -1,31 +1,12 @@
 name: 04 Basics Events External Trigger
 
 on:
-  # pull_request:
-  #   types: [closed, reopened]
-    # types:
-    #   - closed
-    #   - reopened
-  push:
-    # branches:
-    #   - master
-    #   - main
-    # branches-ignore:
-    #   - master
-    #   - main
-    # tags:
-    #   - v2
-    # tags-ignore:
-    #   - v2
-    paths:
-      # - 'routes/*.php'
-      - 'routes/**.php'
-    # paths-ignore:
-    #   - 'routes/web.php'
+  repository_dispatch:
+    types: [custom-event]
 
 jobs:
   print-hello-world:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello World
-        run: echo "Hello World"
+        run: echo "Hello World" 
