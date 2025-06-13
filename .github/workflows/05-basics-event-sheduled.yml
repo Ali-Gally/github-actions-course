@@ -1,8 +1,8 @@
-name: 04 Basics Events External Trigger
+name: 05 Basics Events Scheduled
 
 on:
-  repository_dispatch:
-    types: [custom-event]
+  schedule:
+    - cron: "*/5 * * * *"
 
 jobs:
   print-hello-world:
